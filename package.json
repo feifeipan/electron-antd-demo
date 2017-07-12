@@ -9,7 +9,7 @@
     "build": "cd app && atool-build -o ../src",
     "package:mac": "electron-packager . 'Ares' --overwrite --platform=darwin --arch=x64 --out=release --ignore=app --icon=assets/app-icon/mac/app.icns --app-bundle-id='com.test.ares' --osx-sign",
     "package:win32": "electron-packager . Ares --overwrite --platform=win32 --arch=x64 --out=release --ignore=app --icon=assets/app-icon/mac/app.icns --app-bundle-id='com.test.ares' --osx-sign",
-    "test":"scripts/test"
+    "test":"./scripts/test"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
