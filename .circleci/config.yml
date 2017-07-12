@@ -1,19 +1,19 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/electron-antd-demo
+    working_directory: ~/Code/github/electron-antd-demo
     docker:
       - image: circleci/node:7.10
     steps:
       - checkout
   test1:
-    working_directory: ~/electron-antd-demo
+    working_directory: ~/Code/github/electron-antd-demo
     docker:
       - image: circleci/node:7.10
     steps:
       - run: yarn install
   test2:
-    working_directory: ~/electron-antd-demo
+    working_directory: ~/Code/github/electron-antd-demo
     docker:
       - image: circleci/node:7.10
     steps:
