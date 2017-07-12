@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:7.10
     steps:
       - checkout
-   cach1:
+   cache1:
     working_directory: ~/electron-antd-demo
     docker:
       - image: circleci/node:7.10
@@ -22,7 +22,7 @@ jobs:
       - image: circleci/node:7.10
     steps:
       - run: yarn install
-  cach2:
+  cache2:
     working_directory: ~/electron-antd-demo
     docker:
       - image: circleci/node:7.10
@@ -42,7 +42,7 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - cach1
+      - cache1
       - test1
-      - cach2
+      - cache2
       - test2
