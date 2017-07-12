@@ -23,9 +23,9 @@ jobs:
     steps:
       - run: yarn install
   save_cache:
-    working_directory: ~/<project root directory>
+    working_directory: ~/electron-antd-demo
     docker:
-    - image: circleci/<language>:<version TAG>
+      - image: circleci/node:7.10
     steps:
     - save_cache:
         paths:
