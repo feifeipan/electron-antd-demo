@@ -1,0 +1,33 @@
+{
+  "name": "ares-gui-demo",
+  "version": "1.0.0",
+  "description": "ares gui demo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "autobuild": "cd app && atool-build -w -o ../src",
+    "build": "cd app && atool-build -o ../src",
+    "package:mac": "electron-packager . 'Ares' --overwrite --platform=darwin --arch=x64 --out=release --ignore=app --icon=assets/app-icon/mac/app.icns --app-bundle-id='com.ctrip.ares' --osx-sign",
+    "package:win32": "electron-packager . Ares --overwrite --platform=win32 --arch=x64 --out=release --ignore=app --icon=assets/app-icon/mac/app.icns --app-bundle-id='com.ctrip.ares' --osx-sign"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Ares",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.6.2",
+    "electron-osx-sign": "^0.4.5",
+    "electron-packager": "^8.7.0",
+    "grunt": "^1.0.1",
+    "grunt-electron-installer": "^2.1.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  }
+}
