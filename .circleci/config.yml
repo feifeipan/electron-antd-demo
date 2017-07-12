@@ -6,13 +6,13 @@ jobs:
       - image: circleci/node:7.10
     steps:
       - checkout
-  install:
-   working_directory: ~/electron-antd-demo
+  test1:
+    working_directory: ~/electron-antd-demo
     docker:
       - image: circleci/node:7.10
     steps:
       - run: yarn install
-  test:
+  test2:
     working_directory: ~/electron-antd-demo
     docker:
       - image: circleci/node:7.10
@@ -23,5 +23,5 @@ workflows:
   build_and_test:
     jobs:
       - build
-      - install
-      - test
+      - test1
+      - test2
